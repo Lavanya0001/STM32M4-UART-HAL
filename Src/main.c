@@ -19,6 +19,9 @@ int main()
 	{
 		m_uart_transmit_blocking(Test_data);
 		Led_Toggle(ON_BOARD_LED_BLUE);
+		uint8_t data_read = m_uart_read(0);
+		m_uart_write((int)data_read);
+
 	}
 }
 

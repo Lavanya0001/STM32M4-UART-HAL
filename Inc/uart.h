@@ -14,6 +14,8 @@
 #define USART1_RX		(1U << 10) //PA10(Rx)- 31
 
 void m_uart_init(USART_TypeDef* USART);
+void m_uart_write(int ch);
+int16_t m_uart_read(uint32_t Timeout);
 int m_uart_transmit_blocking( char* ptr);
 
 #endif /* UART_H_ */
